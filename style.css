@@ -1,0 +1,164 @@
+*{
+	padding: 0;
+	margin: 0;
+	front-family: "Roboto", sans-serif;
+}	
+header{
+	height: 100px;
+	background: #00AEEF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 30px;
+	position: relative;
+}						
+header img{
+	width: 80px;
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.header-text{
+	font-size: 38px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+.sub-text{
+	font-size: 20px;
+	font-style: italic;
+	color: #f0f0f0;
+	margin-top:5px;	
+	text-align: center;
+}
+nav {
+	height: 40px;
+	background: #0077cc;
+}
+nav .menu ul{
+	list-style: none;
+}
+nav .menu ul li{	
+	float: left;
+	line-height: 40px;
+	padding: 0 15px;
+}
+nav .menu ul li a{
+	color: white;
+	font-size: 17px;
+	text-decoration: none;
+}
+nav .search{
+	line-height: 35px;
+	float: right;
+	margin-right: 15px;
+}
+article h3{
+	text-align: center;
+	padding: 0;
+	color: #333;
+	font-size: 28px;
+	text-transform: uppercases;
+	font-weight: bold;
+	margin-top: 30px;
+}
+article .n1{
+	padding: 5px 15px;
+	margin: 5px 0;
+	text-indent: 10px;
+	text-align: justify;
+	color: #222;
+	font-size: 22px;
+	line-height: 1.6;
+}			
+article .n1 img{
+	width: 1000px;
+	height: auto;
+	border-radius: 10px;
+	display: block;
+	margin: 0 auto;
+	max-height: 600px;
+	object-fit: cover;
+	margin-top: 10px;
+}
+
+article .n2{
+	padding: 5px 15px;
+	margin: 5px 0;
+	text-indent: 10px;
+	text-align: justify;
+	color: #222;
+	font-size: 22px;
+	line-height: 1.6;
+}
+article .n2 img{
+	width: 1000px;
+	height: auto;
+	border-radius: 10px;
+	display: block;
+	margin: 0 auto;
+	max-height: 600px;
+	object-fit: cover;
+	margin-top: 10px;
+}
+article .n3{
+	padding: 5px 15px;
+	margin: 5px 0;
+	text-indent: 10px;
+	text-align: justify;
+	color: #222;
+	font-size: 22px;
+	line-height: 1.6;
+}	
+article .n3 video{
+	width: 1000px;
+	height: auto;
+	border-radius: 10px;
+	display: block;
+	margin: 0 auto;
+	max-height: 600px;
+	object-fit: cover;
+	margin-top: 10px;
+}
+article .n3 img{
+	width: 1000px;
+	height: auto;
+	border-radius: 10px;
+	display: block;
+	margin: 0 auto;
+	max-height: 600px;
+	object-fit: cover;
+	margin-top: 10px;
+}
+footer{
+	background: #0077cc;
+	color: #fff;
+	text-align: left;
+	font: bold 15px;
+	padding: 15px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;	
+}
+
+.poem {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	font-size: 30px;
+	font-style: italic;
+	background: white;
+	padding: 20px;
+}
+.poem p:nth-child(odd) {
+	text-indent: 10px; /* Thụt đầu dòng */
+	text-align: center;
+}
+
+.poem p{
+	text-align: center;
+}
+
+
+
