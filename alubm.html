@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Báo tường 20/11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#"><img src="img/logo.png" alt=""></a>
+        <div class="header-text">CÁNH BUỒM TRI THỨC<p class="sub-text">"Nơi tri thức thắp sáng tâm hồn, cánh buồm dẫn lối tương lai"</p></div>
+    </header>
+    <nav>
+        <div class="menu">
+            <ul>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="loingo.html">Lời ngỏ</a></li>
+                <li><a href="cauchuyen.html">Những câu chuyện truyền cảm hứng</a></li>
+                <li><a href="tho.html">Bài thơ tri ân</a></li>
+                <li><a href="loi.html">Lời tri ân</a></li>
+                <li><a href="alubm.html">Album&feedback</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="search" placeholder="Search...">
+            <button>Tìm Kiếm</button>
+        </div>
+    </nav>
+    <article>
+    <div class="n4">
+    <div class="slider">
+        <div class="slide">
+            <img src="img/Anh1.jpg" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="img/Anh2.jpg" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="img/Anh3.jpg" alt="Image 3">
+        </div>
+        <div class="slide">
+            <img src="img/Anh4.jpg" alt="Image 4">
+        </div>
+        <div class="slide">
+            <img src="img/Anh5.jpg" alt="Image 5">
+        </div>
+                <div class="slide">
+            <img src="img/Anh6.jpg" alt="Image 6">
+        </div>
+         <div class="slide">
+            <img src="img/Anh7.jpg" alt="Image 7">
+        </div>
+        <div class="slide">
+            <img src="img/Anh8.jpg" alt="Image 8">
+        </div>        <div class="slide">
+        	<img src="img/Anh9.jpg" alt="Image 9">
+        </div>        <div class="slide">
+        	<img src="img/Anh10.jpg" alt="Image 10">
+        </div>
+        <div class="slide">
+            <img src="img/Anh11.jpg" alt="Image 11">
+        </div>
+        <div class="slide">
+            <img src="img/Anh12.jpg" alt="Image 12">
+        </div>
+        <div class="slide">
+            <img src="img/Anh13.jpg" alt="Image 13">
+        </div>
+        <div class="slide">
+            <img src="img/Anh14.jpg" alt="Image 14">
+        </div>
+        <div class="slide">
+            <img src="img/Anh15.jpg" alt="Image 15">
+        </div>
+                <div class="slide">
+            <img src="img/Anh16.jpg" alt="Image 16">
+        </div>
+         <div class="slide">
+            <img src="img/Anh17.jpg" alt="Image 17">
+        </div>
+        <div class="slide">
+            <img src="img/Anh18.jpg" alt="Image 18">
+        </div>        <div class="slide">
+        <img src="img/Anh19.jpg" alt="Image 19">
+        </div>        <div class="slide">
+        <img src="img/Anh20.jpg" alt="Image 20">
+        </div> <div class="slide">
+            <img src="img/Anh21.jpg" alt="Image 21">
+        </div>
+                <div class="slide">
+            <img src="img/Anh22.jpg" alt="Image 22">
+        </div>
+         <div class="slide">
+            <img src="img/Anh23.jpg" alt="Image 23">
+        </div>
+        <div class="slide">
+            <img src="img/Anh24.jpg" alt="Image 24">
+        </div>        
+        <div class="slide">
+        <img src="img/Anh25.jpg" alt="Image 25">
+        </div>        
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <div class="feedback">
+        <h3>Để lại cảm nhận của bạn</h3>
+        <textarea id="feedback-input" placeholder="Nhập cảm nhận của bạn..."></textarea>
+        <button onclick="submitFeedback()">Gửi</button>
+        <ul id="feedback-list"></ul>
+    </div>
+</article>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function showSlide(index) {
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+            slides.forEach(slide => slide.style.display = "none");
+            slides[currentSlide].style.display = "block";
+        }
+        
+        function changeSlide(direction) {
+            currentSlide += direction;
+            showSlide(currentSlide);
+        }
+        
+        if (slides.length > 0) {
+            showSlide(currentSlide);
+            setInterval(() => changeSlide(1), 2000);
+        } else {
+            console.error("Không tìm thấy ảnh nào trong slider!");
+        } 
+        function submitFeedback() {
+        let input = document.getElementById("feedback-input").value;
+        if (input.trim() !== "") {
+            let list = document.getElementById("feedback-list");
+            let listItem = document.createElement("li");
+            listItem.textContent = input;
+            list.appendChild(listItem);
+            document.getElementById("feedback-input").value = ""; // Xóa nội dung ô nhập
+        }
+    }
+    });
+</script>
+    <footer>
+        <p>&copy;2025 Nhóm 4-Lớp 12B2</p>
+        <p>Email: huynhtongan91.hkhoan@gmail.com</p>
+        <p>Ngày cập nhật nội dung gần nhất: 27/02/2025</p>
+        <p>Trang web có sử dụng hình ảnh từ internet</p>
+    </footer>
+</body>
+</html>

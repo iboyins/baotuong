@@ -2,6 +2,7 @@
 	padding: 0;
 	margin: 0;
 	front-family: "Roboto", sans-serif;
+	box-sizing: border-box;
 }	
 header{
 	height: 100px;
@@ -152,13 +153,92 @@ footer{
 	padding: 20px;
 }
 .poem p:nth-child(odd) {
-	text-indent: 10px; /* Thụt đầu dòng */
+	text-indent: 10px; 
 	text-align: center;
 }
 
 .poem p{
 	text-align: center;
 }
+.n4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
 
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+}
 
+.slide {
+    display: none;
+    text-align: center;
+}
 
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+.feedback {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.feedback textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    display: block;
+    margin: 10px auto;
+}
+
+.feedback button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.feedback li {
+    background: #f1f1f1;
+    padding: 10px;
+    margin: 5px auto;
+    width: 80%;
+    border-radius: 5px;
+}
